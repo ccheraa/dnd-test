@@ -1,0 +1,25 @@
+.area {
+  width: 600px;
+  height: 400px;
+  margin: 16px;
+  padding: 16px;
+  border: 2px solid red;
+  box-shadow: 4px 4px maroon;
+}
+@mixin icon {
+  border: 1px solid silver;
+  // margin: 4px;
+  padding: 4px;
+}
+.file {
+  @include icon;
+}
+.folder {
+  @include icon;
+  .file, .folder {
+    &:first-child {
+      margin-top: 8px;
+    }
+    padding-inline-start: 12px;
+  }
+}
