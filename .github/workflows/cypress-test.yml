@@ -22,8 +22,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - uses: comchangs/action-yarn@master
-
+      - name: install yarn
+        run: npm i -g yarn
       - name: install dependencies
         run: yarn
       - name: run cypress tests
